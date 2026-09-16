@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>🎬KUMPULAN HYPER</title>
+
+  <meta name="description"
+        content="Tonton video terbaru dan video lainnya.">
+
+
+  <!-- ==========================================
+       FACEBOOK / OPEN GRAPH
+  =========================================== -->
+
+  <meta property="og:type"
+        content="website">
+
+  <meta property="og:title"
+        content="🎬 Video Asupan">
+
+  <meta property="og:description"
+        content="Tonton video terbaru di sini.">
+
+  <meta property="og:image"
+        content="https://jpcdn.it/img/d5e691c354601510ecaec64f36c5cf3b.jpg">
+
+  <meta property="og:image:secure_url"
+        content="https://jpcdn.it/img/d5e691c354601510ecaec64f36c5cf3b.jpg">
+
+  <meta property="og:image:type"
+        content="image/jpeg">
+
+  <meta property="og:image:width"
+        content="1200">
+
+  <meta property="og:image:height"
+        content="630">
+
+
+  <!-- TWITTER -->
+
+  <meta name="twitter:card"
+        content="summary_large_image">
+
+  <meta name="twitter:title"
+        content="🎬 Video Asupan">
+
+  <meta name="twitter:description"
+        content="Tonton video terbaru di sini.">
+
+  <meta name="twitter:image"
+        content="https://jpcdn.it/img/d5e691c354601510ecaec64f36c5cf3b.jpg">
+
+
+  <!-- ==========================================
+       CSS
+  =========================================== -->
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: #fff;
+
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          #343434 0%,
+          #151515 35%,
+          #080808 70%,
+          #030303 100%
+        );
+
+    }
+
+
+    .container {
+
+      width: 100%;
+
+      max-width: 900px;
+
+      margin: auto;
+
+      padding:
+        20px 14px 50px;
+
+    }
+
+
+    /* ==========================================
+       HEADER
+    =========================================== */
+
+    .header {
+
+      text-align: center;
+
+      padding:
+        10px 10px 25px;
+
+    }
+
+    .logo {
+
+      display: inline-block;
+
+      padding:
+        7px 15px;
+
+      margin-bottom: 12px;
+
+      border-radius: 50px;
+
+      background:
+        rgba(255,255,255,.07);
+
+      border:
+        1px solid
+        rgba(255,255,255,.10);
+
+      color: #ddd;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+    }
+
+    .header h1 {
+
+      font-size: 30px;
+
+      font-weight: 900;
+
+      margin-bottom: 7px;
+
+    }
+
+    .header p {
+
+      color: #999;
+
+      font-size: 14px;
+
+    }
+
+
+    /* ==========================================
+       VIDEO CARD
+    =========================================== */
+
+    .video-card {
+
+      padding: 8px;
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.10),
+          rgba(255,255,255,.025)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.10);
+
+      box-shadow:
+
+        0 25px 70px
+        rgba(0,0,0,.65),
+
+        inset 0 1px 0
+        rgba(255,255,255,.05);
+
+    }
+
+    .video-wrapper {
+
+      position: relative;
+
+      width: 100%;
+
+      overflow: hidden;
+
+      border-radius: 16px;
+
+      background: #000;
+
+    }
+
+    video {
+
+      display: block;
+
+      width: 100%;
+
+      height: auto;
+
+      max-height: 78vh;
+
+      background: #000;
+
+    }
+
+
+    /* ==========================================
+       VIDEO BADGE
+    =========================================== */
+
+    .video-badge {
+
+      position: absolute;
+
+      top: 14px;
+
+      left: 14px;
+
+      z-index: 4;
+
+      padding:
+        7px 11px;
+
+      border-radius: 30px;
+
+      background:
+        rgba(0,0,0,.72);
+
+      border:
+        1px solid
+        rgba(255,255,255,.12);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+    }
+
+
+    /* ==========================================
+       TIMER
+    =========================================== */
+
+    .timer {
+
+      position: absolute;
+
+      top: 14px;
+
+      right: 14px;
+
+      z-index: 4;
+
+      display: none;
+
+      padding:
+        7px 11px;
+
+      border-radius: 30px;
+
+      background:
+        rgba(0,0,0,.75);
+
+      border:
+        1px solid
+        rgba(255,255,255,.12);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+    }
+
+
+    /* ==========================================
+       VIDEO INFO
+    =========================================== */
+
+    .video-info {
+
+      padding:
+        17px 8px 8px;
+
+    }
+
+    .video-title {
+
+      font-size: 19px;
+
+      font-weight: 800;
+
+      margin-bottom: 7px;
+
+    }
+
+    .video-description {
+
+      color: #777;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+
+    }
+
+
+    /* ==========================================
+       NEXT VIDEO
+    =========================================== */
+
+    .next-video {
+
+      display: flex;
+
+      justify-content: center;
+
+      margin-top: 16px;
+
+      padding: 0 8px;
+
+    }
+
+    .next-btn {
+
+      width: 100%;
+
+      max-width: 500px;
+
+      padding:
+        15px 20px;
+
+      border: 0;
+
+      border-radius: 50px;
+
+      cursor: pointer;
+
+      color: #fff;
+
+      font-size: 14px;
+
+      font-weight: 900;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff416c,
+          #ff1744
+        );
+
+      box-shadow:
+        0 12px 35px
+        rgba(255,23,68,.25);
+
+      transition:
+        .25s ease;
+
+    }
+
+    .next-btn:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 16px 40px
+        rgba(255,23,68,.40);
+
+    }
+
+    .next-btn:active {
+
+      transform:
+        scale(.97);
+
+    }
+
+
+    /* ==========================================
+       DIVIDER
+    =========================================== */
+
+    .divider {
+
+      height: 1px;
+
+      margin:
+        30px 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,.12),
+          transparent
+        );
+
+    }
+
+
+    /* ==========================================
+       VIDEO LAINNYA
+    =========================================== */
+
+    .other-section {
+
+      text-align: center;
+
+    }
+
+    .other-section h2 {
+
+      font-size: 20px;
+
+      font-weight: 900;
+
+      margin-bottom: 6px;
+
+    }
+
+    .other-section p {
+
+      color: #777;
+
+      font-size: 12px;
+
+      margin-bottom: 14px;
+
+    }
+
+    .moving-box {
+
+      width: 100%;
+
+      overflow: hidden;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #111,
+          #252525,
+          #111
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.11);
+
+      box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.4);
+
+      cursor: pointer;
+
+    }
+
+    .moving-link {
+
+      display: inline-block;
+
+      white-space: nowrap;
+
+      padding:
+        18px 0;
+
+      color: #fff;
+
+      font-size: 14px;
+
+      font-weight: 900;
+
+      animation:
+        marquee 12s linear infinite;
+
+    }
+
+    .moving-link span {
+
+      margin:
+        0 38px;
+
+    }
+
+    @keyframes marquee {
+
+      0% {
+
+        transform:
+          translateX(100%);
+
+      }
+
+      100% {
+
+        transform:
+          translateX(-100%);
+
+      }
+
+    }
+
+    .moving-box:hover
+    .moving-link {
+
+      animation-play-state:
+        paused;
+
+    }
+
+
+    /* ==========================================
+       FOOTER
+    =========================================== */
+
+    .footer {
+
+      text-align: center;
+
+      margin-top: 30px;
+
+      color: #444;
+
+      font-size: 10px;
+
+    }
+
+
+    /* ==========================================
+       MOBILE
+    =========================================== */
+
+    @media (max-width:600px) {
+
+      .container {
+
+        padding:
+          15px 9px 35px;
+
+      }
+
+      .header h1 {
+
+        font-size: 25px;
+
+      }
+
+      .header p {
+
+        font-size: 12px;
+
+      }
+
+      .video-card {
+
+        padding: 5px;
+
+        border-radius: 17px;
+
+      }
+
+      .video-wrapper {
+
+        border-radius: 12px;
+
+      }
+
+      .video-badge {
+
+        top: 9px;
+
+        left: 9px;
+
+        font-size: 10px;
+
+      }
+
+      .timer {
+
+        top: 9px;
+
+        right: 9px;
+
+        font-size: 10px;
+
+      }
+
+      .next-btn {
+
+        padding:
+          13px 18px;
+
+      }
+
+    }
+
+  </style>
+
+
+  <!-- ==========================================
+       HISTATS
+  =========================================== -->
+
+  <script type="text/javascript">
+
+    var _Hasync = _Hasync || [];
+
+    _Hasync.push([
+      'Histats.start',
+      '1,5043495,4,0,0,0,00010000'
+    ]);
+
+    _Hasync.push([
+      'Histats.fasi',
+      '1'
+    ]);
+
+    _Hasync.push([
+      'Histats.track_hits',
+      ''
+    ]);
+
+    (function() {
+
+      var hs =
+        document.createElement('script');
+
+      hs.type =
+        'text/javascript';
+
+      hs.async = true;
+
+      hs.src =
+        '//s10.histats.com/js15_as.js';
+
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(hs);
+
+    })();
+
+  </script>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+  <!-- ==========================================
+       HEADER
+  =========================================== -->
+
+  <header class="header">
+
+    <div class="logo">
+      🎬 PREMIUM VIDEO
+    </div>
+
+    <h1>
+      🎬 Video Asupan
+    </h1>
+
+    <p>
+      Nikmati video terbaru di bawah ini
+    </p>
+
+  </header>
+
+
+  <!-- ==========================================
+       VIDEO
+  =========================================== -->
+
+  <div class="video-card">
+
+    <div class="video-wrapper">
+
+
+      <div class="video-badge">
+        🔴 VIDEO TERBARU
+      </div>
+
+
+      <div
+        class="timer"
+        id="timer">
+
+        ⏱️ Direct link dalam
+        <span id="countdown">15</span>
+        detik
+
+      </div>
+
+
+      <video
+        id="videoPlayer"
+        controls
+        playsinline
+        preload="metadata">
+
+        <source
+          src="https://cdn2.videy.co/3P0hIbkq1.mp4"
+          type="video/mp4">
+
+        Browser kamu tidak mendukung
+        pemutar video.
+
+      </video>
+
+
+    </div>
+
+
+    <!-- VIDEO INFO -->
+
+    <div class="video-info">
+
+      <div class="video-title">
+        🎥 Video Terbaru
+      </div>
+
+      <div class="video-description">
+        Tekan tombol play untuk mulai menonton.
+      </div>
+
+    </div>
+
+
+    <!-- ======================================
+         NEXT VIDEO BUTTON
+    ======================================= -->
+
+    <div class="next-video">
+
+      <button
+        id="nextVideoBtn"
+        class="next-btn">
+
+        ▶️ &nbsp; NEXT VIDEO
+
+      </button>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <!-- ==========================================
+       VIDEO LAINNYA
+  =========================================== -->
+
+  <section class="other-section">
+
+    <h2>
+      ✨ Video Lainnya
+    </h2>
+
+    <p>
+      Klik untuk melihat video lainnya
+    </p>
+
+
+    <div
+      class="moving-box"
+      onclick="openDirectLink()">
+
+      <div class="moving-link">
+
+        <span>
+          🔥 KLIK UNTUK MELIHAT VIDEO LAINNYA
+        </span>
+
+        <span>
+          🎬 VIDEO TERBARU
+        </span>
+
+        <span>
+          ✨ LIHAT VIDEO LAINNYA
+        </span>
+
+        <span>
+          👉 KLIK DI SINI
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+
+    © 2026 Premium Video Player
+
+  </div>
+
+
+</div>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script>
+
+
+  /* ==========================================
+     DIRECT LINK
+  =========================================== */
+
+  const directLink =
+    "https://www.profitableratecpmnetwork.com/jqam5pwjs?key=759fb4084cc926a5cff7602a430c42af";
+
+
+  /* ==========================================
+     ELEMENT
+  =========================================== */
+
+  const video =
+    document.getElementById(
+      "videoPlayer"
+    );
+
+  const timer =
+    document.getElementById(
+      "timer"
+    );
+
+  const countdown =
+    document.getElementById(
+      "countdown"
+    );
+
+  const nextVideoBtn =
+    document.getElementById(
+      "nextVideoBtn"
+    );
+
+
+  /* ==========================================
+     STATUS
+  =========================================== */
+
+  let redirected =
+    false;
+
+
+  /* ==========================================
+     REDIRECT FUNCTION
+  ========================================== */
+
+  function redirectToDirectLink() {
+
+    if (redirected) {
+      return;
+    }
+
+    redirected = true;
+
+    timer.style.display =
+      "none";
+
+
+    /*
+     * Coba buka tab baru.
+     */
+
+    const newWindow =
+      window.open(
+        directLink,
+        "_blank",
+        "noopener,noreferrer"
+      );
+
+
+    /*
+     * Jika browser memblokir
+     * pembukaan tab baru,
+     * gunakan redirect halaman
+     * sebagai fallback.
+     */
+
+    if (
+      !newWindow ||
+      newWindow.closed ||
+      typeof newWindow.closed === "undefined"
+    ) {
+
+      window.location.href =
+        directLink;
+
+    }
+
+  }
+
+
+  /* ==========================================
+     VIDEO TIME
+  ========================================== */
+
+  video.addEventListener(
+    "timeupdate",
+    function() {
+
+      /*
+       * Setelah video mencapai
+       * 15 detik.
+       */
+
+      if (
+        !redirected &&
+        video.currentTime >= 15
+      ) {
+
+        redirectToDirectLink();
+
+        return;
+
+      }
+
+
+      /*
+       * Countdown.
+       */
+
+      if (
+        !redirected &&
+        video.currentTime > 0 &&
+        video.currentTime < 15
+      ) {
+
+        const remaining =
+          Math.ceil(
+            15 -
+            video.currentTime
+          );
+
+        countdown.textContent =
+          remaining;
+
+      }
+
+    }
+  );
+
+
+  /* ==========================================
+     VIDEO PLAY
+  ========================================== */
+
+  video.addEventListener(
+    "play",
+    function() {
+
+      if (
+        !redirected &&
+        video.currentTime < 15
+      ) {
+
+        timer.style.display =
+          "block";
+
+      }
+
+    }
+  );
+
+
+  /* ==========================================
+     NEXT VIDEO
+  ========================================== */
+
+  nextVideoBtn.addEventListener(
+    "click",
+    function() {
+
+      window.location.href =
+        directLink;
+
+    }
+  );
+
+
+  /* ==========================================
+     VIDEO LAINNYA
+  ========================================== */
+
+  function openDirectLink() {
+
+    window.location.href =
+      directLink;
+
+  }
+
+
+</script>
+
+
+</body>
+</html>
